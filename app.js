@@ -2,9 +2,9 @@
 import mongoose from 'mongoose';
 import express from 'express';
 import { studentRouter } from './routes/studentRouter.js';
+import dotenv from 'dotenv';
 
-require('dotenv').config();
-
+dotenv.config();
 //conectando ao mongodb pelo mongoose
 await mongoose.connect(
   `mongodb+srv://${process.env.USER_DB}:${process.env.PWD_DB}@learning.mbug9.mongodb.net/grades?retryWrites=true&w=majority`,
