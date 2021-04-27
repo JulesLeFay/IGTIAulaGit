@@ -7,7 +7,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 //conectando ao mongodb pelo mongoose
 await mongoose.connect(
-  `mongodb+srv://${process.env.USER_DB}:${process.env.PWD_DB}@learning.mbug9.mongodb.net/grades?retryWrites=true&w=majority`,
+  `mongodb+srv://{$process.env.USER_DB}:{$process.env.PWD_DB}@learning.mbug9.mongodb.net/grades?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
